@@ -1,4 +1,4 @@
-var endDate = new Date('2021/07/24 00:00:00');
+var endDate = new Date('2021/03/01 00:00:00');
 var interval = 1000;
 
 
@@ -7,7 +7,7 @@ function countdownTimer(){
     var period = endDate - nowDate ;
     var addZero = function(n){return('0'+n).slice(-2);}
     var addZeroDay = function(n){return('0'+n).slice(-3);}
-
+    
     if(period >= 0) {
         var day = Math.floor(period / (1000 * 60 * 60 * 24));
         period -=  (day　*(1000 * 60 * 60 * 24));
@@ -17,10 +17,10 @@ function countdownTimer(){
         period -= (minutes * (1000 * 60));
         var second = Math.floor(period / 1000);
         var insert = "";
-        insert += '<span class="h">' + addZeroDay(day) +'日' + '</span>';
-        insert += '<span class="h">' + addZero(hour) + '時'+'</span>';
-        insert +=  '<span class="m">' + addZero(minutes) +'分' + '</span>';
-        insert += '<span class="s">' + addZero(second)+ '秒'+ '</span>';
+        insert += '<span class="h">' + addZeroDay(day) +'<span class="text-3xl">日</span>' + '</span><br class="md:hidden">';
+        insert += '<span class="h">' + addZero(hour) + '<span class="text-3xl">時間'+'</span>';
+        insert +=  '<span class="m">' + addZero(minutes) +'<span class="text-3xl">分' + '</span>';
+        insert += '<span class="s">' + addZero(second)+ '<span class="text-3xl">秒'+ '</span>';
         document.getElementById('result').innerHTML = insert;
         setTimeout(countdownTimer,10);
     }

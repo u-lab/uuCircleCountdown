@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
+
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="countdown.css">
+        <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:300,400,700" rel="stylesheet"></link>
         <title>カウントダウン</title>
     </head>
-    <body>
+
+    <body class="font-body">
         <div class="top-wrapper">
-            <img src="新歓サイトトップ画像.png" width="1690" height="225">
+            <img class="top-wrapper-img" src="新歓サイトトップ画像.png" width="1690" height="225">
         </div>
 
-        <div class="countdown-comment">
-            サークルビラ一覧サイト<br>
-            リリースまで
+        <div class="text-xl text-center md:text-4xl">
+            <p class="md:leading-loose">
+                サークルビラ一覧サイト<br>
+                リリースまで
+            </p>
         </div>
-
         
-        <div id="result" class="countdown-timer"></div>
-        <script src="countdown.js"></script><br><br><br>
+        <div id="result" class="text-5xl text-center md:text-6xl md:mt-4 md:mb-20 mb-4"></div>
+        <script src="countdown.js"></script>
 
-        <p class="concept">
+        <p class="text-center font-bold text-3xl text-gray-800 leading-relaxed md:text-4xl">
             宇大のサークルが気になる<br>
             新入生の君へ！<br>
             新入生メディアサイトで<br>
             入学の準備を整えよう！
         </p>
 
+        <div class="button">    
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                <a href="https://media.uu-circles.com/">
+                    新入生メディアサイトはこちら！
+                </a>
+            </button>
+        </div>
+
         <div class="footer-link">
-            <div class="footer-link-item">U-lab 　　みやメシ</div>
+            <div class="footer-link-item">
+                <a href="https://ulab-uu.com/">U-lab</a>   　　
+                <a href="https://miyameshi.com/">みやメシ</a>
+            </div>
         </div>
     </body>
 </html>
